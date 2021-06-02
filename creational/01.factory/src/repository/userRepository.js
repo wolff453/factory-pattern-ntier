@@ -3,7 +3,7 @@
         this.dbConnection = dbConnection
     }
 
-    async select(query) {
+    async selectAll(query) {
         return this.dbConnection.select(query)
 
    }
