@@ -3,16 +3,18 @@
         this.dbConnection = dbConnection
     }
 
-    async selectAll(query) {
-        return this.dbConnection.select(query)
+    async selectAllWithID(query) {
+         this.dbConnection.connectionString.where({ID:query}).select().table("users").then(e => {
+             console.log(e)
+         })
+
+   }
+
+   async insert(){
 
    }
  
-
-    // test(){
-    //     return this.dbConnection.e()
-    // }
-
+ 
 }
 
 module.exports = UserRepository

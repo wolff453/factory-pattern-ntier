@@ -3,7 +3,7 @@ class UserService{
         this.userRepository = userRepository
     }
     async finda(query){
-        const users = await this.userRepository.selectAll(query)
+        const users = await this.userRepository.selectAllWithID(query)
         return users
     }
 }
