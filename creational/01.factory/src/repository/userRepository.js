@@ -4,10 +4,8 @@
     }
 
     async selectAllWithID(query) {
-         this.dbConnection.connectionString.where({ID:query}).select().table("users").then(e => {
-             console.log(e)
-         })
-
+        const slct = await this.dbConnection.connectionString.where({ID:query}).select().table("users")
+        return slct
    }
  
  
